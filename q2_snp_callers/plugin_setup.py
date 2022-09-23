@@ -11,11 +11,7 @@
 #   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
-from q2_types.per_sample_sequences import SequencesWithQuality, PairedEndSequencesWithQuality
-from q2_types.sample_data import SampleData
 from qiime2.plugin import Plugin
-
-from q2_nasp2_types.types import SAMFile
 
 plugin = Plugin(name='gatk',
                 version='0.0.1',
