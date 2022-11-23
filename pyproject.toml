@@ -1,3 +1,27 @@
 [build-system]
 requires = ["setuptools>=61.0", "versioneer"]
+build-backend = "s[build-system]
+requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "q2-snp-callers"
+description = "snp-callers is a qiime2 pipeline"
+readme = "README.rst"
+requires-python = ">=3.8"
+keywords = ["one", "two"]
+version = "0.1.0"
+license = "Academic and Research License"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+
+[tool.setuptools.packages.find]
+where = ["q2-snp-callers"]  # list of folders that contain the packages (["."] by default)
+include = ["q2_*"]  # package names should match these glob patterns (["*"] by default)
+
+[project.entry-points."qiime2.plugins"]
+#q2-nasp2-types = "q2_nasp2_types.plugin_setup:plugin"
+#q2-nasp2 = "q2_nasp2.plugin_setup:plugin"
+#q2-aligners = "q2_aligners.plugin_setup:plugin"
+q2-snp-callers= "q2_snp_callers.plugin_setup:plugin"
